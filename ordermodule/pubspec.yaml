@@ -1,0 +1,42 @@
+name: ordermodule
+description: Handle all orders and deliveries
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+
+  cupertino_icons:
+  flutter_vector_icons:
+#  share:
+  webview_flutter:
+  photo_view:
+  url_launcher:
+
+
+  reworkutils:
+    path: ../rework_utils
+  kitchlykitchendb:
+    path: ../kitchly_kitchen_db
+  providermodule:
+    path: ../providermodule
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+
+flutter:
+
+  uses-material-design: true
+
+  module:
+    androidX: true
+    androidPackage: com.ordermodule
+    iosBundleIdentifier: com.ordermodule

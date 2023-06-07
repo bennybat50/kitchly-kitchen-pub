@@ -1,0 +1,34 @@
+name: menumodule
+description: Module to handle menu
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons:
+  highlighter_coachmark:
+  flutter_datetime_picker:
+  reworkutils:
+    path: ../rework_utils
+  kitchlykitchendb:
+    path: ../kitchly_kitchen_db
+  providermodule:
+    path: ../providermodule
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+
+flutter:
+
+  uses-material-design: true
+
+  module:
+    androidX: true
+    androidPackage: com.menumodule
+    iosBundleIdentifier: com.menumodule

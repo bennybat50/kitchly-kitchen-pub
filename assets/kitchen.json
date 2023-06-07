@@ -1,0 +1,76 @@
+{
+  "user_id": "QBfVMKAF33F5tpxYQXuex2t1TBQXIuyN",
+  "kitchen_id": "f2f1e1f38c8e4e86a2f8c425685949d1",
+  "kitchen_name": "Yyh",
+  "username": "ghhh",
+  "email": "hni99457@bcaoo.com",
+  "phone": "187888888",
+  "caption": "Hhhjj",
+  "city": "Abuja, FCT, Federal Capital Territory",
+  "district": "Asokoro",
+  "landmark": "Dsdds",
+  "addr": "Fffff",
+  "position": {
+    "longitude": 9.030472,
+    "latitude": 7.493467
+  },
+  "openings": {
+    "Monday": [
+      {
+        "am": "19:24"
+      },
+      {
+        "pm": "19:24"
+      }
+    ],
+    "Tuesday": [
+      {
+        "am": "19:24"
+      },
+      {
+        "pm": "19:24"
+      }
+    ],
+    "Wenesday": [
+      {
+        "am": "19:24"
+      },
+      {
+        "pm": "19:24"
+      }
+    ],
+    "Thursday": [
+      {
+        "am": "19:23"
+      },
+      {
+        "pm": "19:23"
+      }
+    ],
+    "Friday": [
+      {
+        "am": "19:23"
+      },
+      {
+        "pm": "19:23"
+      }
+    ],
+    "Saturday": [
+      {
+        "am": "19:23"
+      },
+      {
+        "pm": "19:23"
+      }
+    ],
+    "Sunday": [
+      {
+        "am": "19:23"
+      },
+      {
+        "pm": "19:23"
+      }
+    ]
+  },
+  "kitchen_video": "http://localhost:6001/api/images/QBfVMKAF33F5tpxYQXuex2t1TBQXIuyN/VID_2020-06-26 06-11-16.mp4"
+}

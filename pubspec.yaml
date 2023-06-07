@@ -1,0 +1,107 @@
+name: kitchly_chef
+description: A new Flutter application.
+
+version: 1.0.0+18
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.5
+  http: ^0.13.5
+  package_info_plus:
+  image:
+#  share:
+  webview_flutter:
+  photo_view:
+  url_launcher:
+  cached_network_image:
+  date_format:
+  vibration:
+  flutter_slidable:
+  flutter_launcher_icons:
+#  flutter_local_notifications_platform_interface:
+  highlighter_coachmark:
+  flutter_vector_icons:
+  auto_orientation:
+  flutter_rating_bar:
+  firebase_crashlytics:
+  firebase_analytics:
+  firebase_core:
+#  flutter_local_notifications: ^13.0.0
+  intl:
+  flutter_email_sender:
+
+
+
+  reworkutils:
+    path: ./rework_utils
+  kitchlykitchendb:
+    path: kitchly_kitchen_db
+  ordermodule:
+    path: ordermodule
+  providermodule:
+    path: providermodule
+  menumodule:
+    path: menumodule
+
+dev_dependencies:
+
+  flutter_test:
+    sdk: flutter
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/images/logo.png"
+
+flutter:
+
+  uses-material-design: true
+
+  # IMAGES
+  assets:
+    - assets/images/logo.png
+    - assets/images/logo_long.png
+    - assets/images/slide/icon1.png
+    - assets/images/slide/icon2.png
+    - assets/images/slide/icon3.png
+    - assets/images/foodPlace.png
+    - assets/images/placehold1.jpg 
+    - assets/images/food-combo.jpg
+    - assets/images/placehold2.jpg
+    - assets/images/menuimg.jpg
+    - assets/images/per-plate.jpg
+    - assets/images/buffet.jpg
+    - assets/images/chops.jpg
+    - assets/images/menuimg1.png
+    - assets/images/kitchenDefault.jpg
+    - assets/images/icons/category_icon.png
+    - assets/images/icons/dish_icon.png
+    - assets/images/icons/extra_icon.png
+    - assets/images/icons/connection_icon.png
+    - assets/images/icons/menu_icon.png
+    - assets/images/icons/order_icon1.png
+    - assets/images/icons/order_icon2.png
+    - assets/images/icons/delivery_icon.png
+    - assets/images/icons/dataError_icon.png
+    - assets/images/icons/accept_order.png
+    - assets/images/icons/deliver_order.png
+    - assets/images/icons/money.png 
+    - assets/images/icons/cancel.png
+    - assets/images/icons/update_icon.png
+    - assets/images/completed.png
+
+  # FONTS:
+  fonts:
+    - family: ROBOTO
+      fonts:
+        - asset: assets/fonts/Roboto-Medium.ttf
+    - family: OpenSansB
+      fonts:
+        - asset: assets/fonts/OpenSans-SemiBold.ttf
+    - family: CeraPro
+      fonts:
+        - asset: assets/fonts/CeraPro-Medium.ttf

@@ -1,0 +1,733 @@
+There are more endpoints, one of the endpoint is for the both the customer and the chef
+local email 
+kyd06415@bcaoo.com
+sow53917@bcaoo.com
+
+BASE URL http://159.65.85.159:6000
+
+POST /api/v1/create/customer
+{
+    "first_name":"emily",
+    "last_name":"chan",
+    "email":"apmetdrm@gmail.com",
+    "phone":"09072185998",  
+    "passwd":"devrus230",
+    "device":{
+        "os":"android",
+        "version":"6.0",
+        "model":"GIONEE",
+        "brand":"M2160",
+        "dimension":"300x450",
+        "device_id":"wBq0QqQDm3hfyhwucwwnLCVI9I99pdqn"
+    },
+    "country":{
+        "name":"Nigeria",
+        "zip":"+234"
+    },
+    "app":{
+        "v_name" : "1.0.1",
+        "v_code" : "1"
+    }
+}
+
+
+POST /api/v1/login/customer
+{
+   "email":"",
+   "passwd":"",
+   "device_id":""
+}
+
+
+
+POST /api/v1/create/chefs
+{
+    "first_name":"emily",
+    "last_name":"chan",
+    "email":"apmetdrm@gmail.com",
+    "phone":"09072185998",  
+    "passwd":"devrus230",
+    "device":{
+        "os":"android",
+        "version":"6.0",
+        "model":"GIONEE",
+        "brand":"M2160",
+        "dimension":"300x450",
+        "device_id":"wBq0QqQDm3hfyhwucwwnLCVI9I99pdqn"
+    },
+    "country":{
+        "name":"Nigeria",
+        "zip":"+234"
+    },
+    "app":{
+        "v_name" : "1.0.1",
+        "v_code" : "1"
+    }
+}
+
+
+POST /api/v1/login/chefs
+{
+   "email":"",
+   "passwd":"",
+   "device_id":""
+}
+
+BASE_URL http://159.65.85.159:6004/
+POST /api/v1/kitchens
+
+{
+  "user_id":"Y7PkuczR2mFamAnfRuBIaleOGulhMIDl",
+  "kitchen_name":"Cold Stone Creamery- Garki",
+  "user_name":"cold_stone",
+  "email":"apmetdrm@gmail.com",
+  "phone":"810 296 4648",
+  "caption":"Try us today and enjoy the Ultimate Ice cream Experience"
+}
+
+PUT /api/v1/:kitchen_id/location
+
+{
+  "country":"Nigeria",
+  "city":"Lagos",
+  "district":"Maitama",
+  "addr":"466 Ahmadu Bello Way, Garki 2, Abuja",
+  "position":{
+      "longitude":9.030472,
+      "latitude":7.493467
+  }
+}
+
+PUT /api/v1/kitchens/:id/resources
+
+{
+  "profile":"",
+  "kitchen":[
+    "",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "tour":"",
+  "large":"",
+  "small":""
+}
+
+
+PUT /api/v1/kitchens/:id/openings 
+
+Where type is 1 and kitchen opens everyday
+ {
+   "openings":{
+     "type":1,
+     "am":6,
+     "pm":8
+   }
+ }
+
+Where type is 2 and kitchen opens monday to friday
+ {
+   "openings":{
+     "type":2,
+     "am":9,
+     "pm":8
+   }
+ }
+
+Where type is 3 and opens on specific days
+{
+  "openings":{
+    "type":3,
+    "days":{
+      "monday":[{"am":"09:00","pm":"7:45" }],
+      "tuesday":[{"am":"09:00","pm":"7:45" }],
+      "wednesday":[{"am":"09:00","pm":"7:45"  }],
+      "thursday":[{"am":"10:00","pm":"7:45"  }],
+      "friday":[{"am":"09:00","pm":"7:45"  }],
+      "saturday":[{"am":"09:00","pm":"7:45"  }],
+      "sunday":[{"am":"09:00","pm":"7:45"  }]      
+     }
+  }
+}
+
+POST /api/v1/logout/chef
+Logout
+{
+   "token":"",
+   "user_id":"",
+   "device_id":""
+}
+
+POST /api/v1/kitchens/orders
+get all the orders for the kitchen
+{
+ "id":"1234" -> kitchen id localID 1081a220580244838a809bb8bae7a1ec Online bc6b3fa935ea4a8cb4de4753fa4a3bfa
+}
+
+POST /api/v1/kitchens/regions
+state is all the state in nigeria by "name"
+region is all the districts in the state by "name"
+{
+  "query":{
+    "region":"asokoro",
+    "state":"abuja"
+  },
+  "page":1,
+  "limit":5
+}
+
+GET http://localhost:6004/api/v1/meals
+Response
+[
+    {
+        "title": "africa"
+    },
+    {
+        "title": "diner"
+    },
+    {
+        "title": "launch"
+    },
+    {
+        "title": "intercontinental"
+    },
+    {
+        "title": "spanish"
+    },
+    {
+        "title": "french"
+    }
+]
+
+POST http://localhost:6004/api/v1/menus
+Content-Type: application/json 
+
+{
+  "kitchen":"3",
+  "title":"Noodles"
+}
+response
+{
+    "_id": "D9phnSYnnAqsMjudSRZ2FX8Ltu9VKVSx",
+    "title": "Noodles",
+    "kitchen": "1081a220580244838a809bb8bae7a1ec"
+}
+
+http://192.168.1.4:6004/api/v1/kitchen/menus
+{
+  "query":{
+    "kitchen_id":"1081a220580244838a809bb8bae7a1ec"
+  }
+}
+Response
+[
+    {
+        "title": "Noodles",
+        "id": "D9phnSYnnAqsMjudSRZ2FX8Ltu9VKVSx"
+    },
+    {
+        "title": "Soup",
+        "id": "x3ZG9Yb6HjZ0dnWrmVWDMz2GoVgXae3D"
+    }
+]
+
+For getting all the meal types on the system
+
+
+
+Get all the dishes by a kitchen
+POST http://localhost:6004/api/v1/kitchens/dishes
+Content-Type : application/json
+
+{
+  "query":{
+    "kitchen_id":"4"
+  }
+}
+
+
+Create a dish by the kitchen
+add the menu it belongs to 
+add the meal type it belong to, the meal type can be more than one
+[
+{ "title" : "diner" },
+{ "title" : "launch" }
+]
+
+POST http://localhost:6004/api/v1/create/dishes
+Content-Type: application/json
+
+{
+  "name":"Big Mac Large meal",
+  "kitchen":"4",
+  "category":1,
+  "descp":"Excellent Big Mac meal. Choose burger together with cripsy fries and refreshing drink!",
+  "menu":4,
+  "meal":[],
+  "price":6.10,
+  "img":"",
+  "ingredient":[],
+  "extra":[5,6]
+}
+
+
+tell femi about n  PI6oLSECW4lTFwGhoFAjEQUNeIXMO2li
+POST /api/v1/kitchens/dishes
+
+{
+  "query":{
+    "kitchen_id":"4"-> kitchen id
+  }
+}
+{
+    "dishes": [
+        {
+            "id": "D9phnSYnnAqsMjudSRZ2FX8Ltu9VKVSx",
+            "name": "Noodles",
+            "dishes": [
+                {
+                    "name": "Big Mac Large meal",
+                    "descp": "Excellent Big Mac meal. Choose burger together with cripsy fries and refreshing drink!",
+                    "price": 6.1,
+                    "id": "579c392685614aa7abcbf3abc3f44d17",
+                    "image": "http://192.168.1.4:6003/api/images/1081a220580244838a809bb8bae7a1ec/farm.jpg",
+                    "extras": [
+                        {
+                            "type": 1,
+                            "name": "Drink",
+                            "descp": "Anything can go",
+                            "id": "RoZvqahRkOdJuyxAEutV6wm3is4LDPte",
+                            "options": [
+                                {
+                                    "name": "Coca-Cola, 500ml",
+                                    "id": "6goLYwUblbSOtJ4CH63EjJTUTtgxxPDj"
+                                },
+                                {
+                                    "name": "Coca-Cola Zero, 500ml",
+                                    "price": 400,
+                                    "id": "uVR61aP0QnO4dElYKiYGvR64nB9RkhwH"
+                                },
+                                {
+                                    "name": "Fanta, 500ml",
+                                    "price": 400,
+                                    "id": "xh6P5RheyoCdaDkEnJe483PhtFcF4I2o"
+                                },
+                                {
+                                    "name": "Sprite, 500ml",
+                                    "price": 400,
+                                    "id": "030PLGaM0qTB2Ya5Wtm002DUSGPE2mU3"
+                                },
+                                {
+                                    "name": "Cappuccino, 300ml",
+                                    "price": 400,
+                                    "id": "BCMhJRie1zfL58RpTUkBq5t16FfS8LQp"
+                                },
+                                {
+                                    "name": "Latte, 300ml",
+                                    "price": 400,
+                                    "id": "1UohWZ4xQ0a1T5l6EyLqSJetF19JWHXE"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "x3ZG9Yb6HjZ0dnWrmVWDMz2GoVgXae3D",
+            "name": "Soup",
+            "dishes": []
+        },
+        {
+            "id": "q8i6YX3uOVyLzuliablZEqDVo2YJbm9I",
+            "name": "Soup",
+            "dishes": []
+        },
+        {
+            "id": "P06XPWMwGtudNDJKrrlDYDlm9JMzHmjk",
+            "name": "Rice",
+            "dishes": []
+        },
+        {
+            "id": "nspdiyinw7ptMRDNSbPkngCYu6ocItt0",
+            "name": "Salad",
+            "dishes": []
+        },
+        {
+            "id": "xlmKh1zzp1CQbWFtpyx4L4fhod0BUopb",
+            "name": "Salad",
+            "dishes": []
+        }
+    ],
+    "currency": {}
+}
+
+
+POST /api/v1/create/options
+
+[
+  {
+  "name":"Coca-Cola, 500ml",
+  "kitchen":"4"
+ },
+  {
+  "name":"Coca-Cola Zero, 500ml",
+  "kitchen":"4"
+ },
+  {
+  "name":"Fanta, 500ml",
+  "kitchen":"4"
+ },
+ {
+  "name":"Sprite, 500ml",
+  "kitchen":"4"
+ },
+ {
+  "name":"Cappuccino, 300ml",
+  "kitchen":"4"
+ },
+  {
+  "name":"Latte, 300ml",
+  "kitchen":"4"
+ },
+ {
+  "name":"Black coffee, 300ml",
+  "kitchen":"4"
+ },
+ {
+  "name":"Coffee with milk, 300ml",
+  "kitchen":"4"
+ },
+ {
+  "name":"Peach Ice Tea, 500ml",
+  "kitchen":"4"
+ },
+ {
+  "name":"Apple juice, 400ml",
+  "kitchen":"4"
+ },
+ {
+  "name":"Orange juice, 400ml",
+  "kitchen":"4"
+ }
+]
+
+POST /api/v1/create/extras
+Array of extras if available
+[{	
+  "type":1,
+  "name":"Drink",
+  "caption":"Drink for big Mac meal",
+  "descp":"",
+  "option":6,
+  "required":1,
+  "kitchen":"4"
+}]
+
+
+POST /api/v1/create/dishes
+
+{
+  "name":"Big Mac Large meal",
+  "kitchen":"4",->[kitchen id]
+  "category":1,
+  "descp":"Excellent Big Mac meal. Choose burger together with cripsy fries and refreshing drink!",
+  "menu":4,-> [menus the dish belong to]
+  "meal":[african,continental...],->[category meals belong to]
+  "price":6.10,
+  "img":"",
+  "ingredient":[],-> if ingredient is available
+  "extra":[5,6]-> extras ids
+}
+
+
+CART
+BASEURL http://159.65.85.159:6005/
+
+
+views users cart information
+POST /api/v1/cart
+{
+  "id":"1234567890"
+}
+
+
+adds item to cart
+POST /api/v1/cart/add
+
+{
+  "id":"1234567890",
+  "kitchen":"3",
+  "order":[
+    { "menu":"9","dish":"12","qty":1,"extra" :[{"id":12,"qty":2}]},
+    { "menu":"9","dish":"13","qty":2,"extra" :[{"id":13,"qty":1}]},
+    { "menu":"21","dish":"28","qty":2}
+  ],
+  "total":1250.99
+}
+
+
+POST /api/v1/cart/remove
+
+{
+  "id":"1235",
+  "dish":1
+  "extra":1
+}
+
+DELETE /api/v1/cart
+
+{
+  "id":"1235"
+}
+
+POST /api/v1/cart/checkout
+
+{
+  "id":"12345"
+}
+
+
+DISH
+
+For creating a dish
+POST http://localhost:6004/api/v1/create/dishes
+{
+  "name":"Big Mac Large meal",
+  "kitchen":"4",
+  "category":1,
+  "descp":"Excellent Big Mac meal. Choose burger together with cripsy fries and refreshing drink!",
+  "menu":4,
+  "meal":[1,2],
+  "price":6.10,
+  "img":"",
+  "ingredient":[],
+  "extra":[5,6],
+  "package":350.00
+}
+
+
+
+EXTRA
+
+Creating an extra
+POST http://localhost:6004/api/v1/create/extras
+
+{
+  "kitchen":"e82ed11c49884b5b83e5c5844c1f22e9",
+  "option":1,
+  "extras":[
+    {
+      "type":1,
+      "name":"Drink",
+      "caption":"Drink for big Mac meal",
+      "descp":"",    
+      "required":1
+    }
+  ]
+}
+
+To get all extra
+POST http://localhost:6004/api/v1/kitchens/extras HTTP/1.1
+
+{
+  "query":{
+    "kitchen":"e82ed11c49884b5b83e5c5844c1f22e9"
+  }
+}
+
+To update an extra
+PUT http://localhost:6004/api/v1/kitchens/40L1RRIhWkApmL0VsjwOXuELtPn49jzH/extras
+
+{
+  "kitchen":"e82ed11c49884b5b83e5c5844c1f22e",
+  "caption":"Never ever leave you",
+  "descp":"Just a main value to be set in",
+  "option":1,
+  "required":0,
+  "max":0,
+  "min":0,
+  "type":1,
+  "name":"Drinks with water"
+}
+
+To delete an extra
+DELETE http://localhost:6004/api/v1/kitchens/extras
+
+{
+  "extra":"5mN70LxDJufkFnqO8usLv9jYV6iv3dUZ"
+}
+
+
+OPTION
+
+POST http://localhost:6004/api/v1/create/options
+
+{
+    "kitchen":"e82ed11c49884b5b83e5c5844c1f22e9",
+    "option":1,
+    "options":[
+        {
+        "name":"Coca-Cola Zero, 500ml"
+        },
+        {
+        "name":"Fanta, 500ml"
+        },
+        {
+        "name":"Sprite, 500ml"
+        },
+        {
+        "name":"Cappuccino, 300ml"
+        },
+        {
+        "name":"Latte, 300ml"
+        },
+        {
+        "name":"Black coffee, 300ml"
+        },
+        {
+        "name":"Coffee with milk, 300ml"
+        },
+        {
+        "name":"Peach Ice Tea, 500ml"
+        },
+        {
+        "name":"Apple juice, 400ml"
+        },
+        {
+        "name":"Orange juice, 400ml"
+        }   
+    ]  
+}
+
+
+PUT http://localhost:6004/api/v1/kitchens/5iXV1I4poypqtV1rqJj1d8zPXDkBUk7l/options
+
+{
+    "name":"Lydia Sprite 4 lyf"
+}
+
+POST http://localhost:6004/api/v1/kitchens/options
+
+{
+    "kitchen":"e82ed11c49884b5b83e5c5844c1f22e9"
+}
+
+
+To get a particular option
+POST http://localhost:6004/api/v1/kitchens/options/value
+{
+    "option":1
+}
+
+
+DELETE  http://localhost:6004/api/v1/kitchens/options 
+The id is the option id
+{
+    "id":"m2bEDHzs3iLyOQNRy14Rsr3uBaY5221R"
+}
+
+
+Get all extra
+POST http://localhost:6004/api/v1/kitchens/extras DONE
+
+{
+  "query":{
+    "kitchen":"e82ed11c49884b5b83e5c5844c1f22e9"
+  }
+}
+
+Update an extra
+PUT http://localhost:6004/api/v1/kitchens/:id/extras CHECK
+
+{
+  "kitchen":"e82ed11c49884b5b83e5c5844c1f22e",
+  "caption":"Never ever leave you",
+  "descp":"Just a main value to be set in",
+  "option":1,
+  "required":0,
+  "max":0,
+  "min":0,
+  "type":1,
+  "name":"Drinks with water"
+}
+
+Delete extra
+DELETE http://localhost:6004/api/v1/kitchens/extras CHECK
+The extra is the extra id
+{
+  "extra":"5mN70LxDJufkFnqO8usLv9jYV6iv3dUZ"
+}
+
+POST http://localhost:6004/api/v1/create/menus HTTP/1.1
+{
+  "kitchen":"e82ed11c49884b5b83e5c5844c1f22e9",
+  "title":"nice"
+}
+
+
+POST http://localhost:6004/api/v1/kitchens/menus DONE
+{
+  "query":{
+    "kitchen":"e82ed11c49884b5b83e5c5844c1f22e9"
+  }
+}
+
+PUT http://localhost:6004/api/v1/kitchens/:menu_id/menus  CHECK
+{
+  "title":"menu_name"
+}
+
+DELETE http://localhost:6004/api/v1/kitchens/menus CHECK
+{
+  "menu":2
+}
+
+
+
+
+pass all to the country value if you want to get all countries
+or use the country cod to get specific country
+
+###
+POST http://192.168.1.4:6004/api/v1/q/countries
+{
+    "query":{
+        "country":"ng"
+    }
+}
+
+
+###
+POST http://192.168.1.4:6004/api/v1/q/states
+
+{
+    "query":{
+        "country":"ng"
+    }
+}
+
+###
+POST http://192.168.1.4:6004/api/v1/q/districts
+
+{
+    "query":{
+        "state_id":"abuja"
+    }
+}
+
+{
+    "user_id": "gnpl0YRgDM0aydocPNH4Kuf1mbi8fAjS",
+    "phone": "08054214455",
+    "email": "lsd91391@zzrgg.com",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiZ25wbDBZUmdETTBheWRvY1BOSDRLdWYxbWJpOGZBalMiLCJlbWFpbCI6ImxzZDkxMzkxQHp6cmdnLmNvbSIsImlhdCI6MTU5MDY2NTAwMSwiZXhwIjoxNTkwNjk1MDAxfQ.kTdexacuZAvsgNB4pl-LRfcSgSF4BDts7XzC6S_x2jY"
+}
+
+1. Order Coundown
+2. With countdown order with the lowest countdown shows first;
+3. Order can bae accepted and rejected
+4. Reviews on user page
+5. clientInfo under the order page
+6. Create dish should have cooking duration time
+7. Deleted order page to show summary of deleted orders

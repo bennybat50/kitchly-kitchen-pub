@@ -1,0 +1,17 @@
+name: kitchlykitchendb
+description: Handle kitchly kitchen  database
+version: 0.0.1
+author: Young Batimehin
+homepage:
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+
+dependencies:
+  sqflite:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter

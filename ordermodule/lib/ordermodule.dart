@@ -1,0 +1,14 @@
+library ordermodule;
+export 'package:ordermodule/modules/order.dart';
+export 'package:ordermodule/modules/order_summary.dart';
+export 'package:ordermodule/modules/view_order.dart';
+export 'package:ordermodule/modules/delivery.dart';
+export 'package:ordermodule/modules/order-actions.dart';
+export 'package:ordermodule/modules/views/pending.dart';
+export 'package:ordermodule/modules/views/accepted.dart';
+export 'package:ordermodule/modules/views/ready.dart';
+export 'package:ordermodule/modules/views/rejected.dart';
+export 'package:ordermodule/modules/views/delivered.dart';
+export 'package:ordermodule/modules/views/earning.dart';
+export 'package:ordermodule/modules/views/in_transit.dart';
+export 'package:ordermodule/modules/checkStatus.dart';

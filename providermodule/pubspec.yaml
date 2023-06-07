@@ -1,0 +1,30 @@
+name: providermodule
+description: Handle every global class for kitchely chef
+version: 0.0.1
+author:
+homepage:
+
+environment:
+  sdk: ">=2.1.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  http: ^0.13.3
+  cached_network_image: ^2.0.0
+  photo_view: ^0.10.2
+  flutter_vector_icons: ^0.2.1
+  intl: ^0.17.0
+  flutter_styled_toast: ^1.5.2+3
+#  firebase_dynamic_links:
+  provider: ^4.3.2+2
+  reworkutils:
+    path: ../rework_utils
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+
+flutter:
+

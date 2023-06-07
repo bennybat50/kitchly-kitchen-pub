@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "191913794144",
+    "firebase_url": "https://kitchlychef.firebaseio.com",
+    "project_id": "kitchlychef",
+    "storage_bucket": "kitchlychef.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:191913794144:android:e712718567b1e55e96c105",
+        "android_client_info": {
+          "package_name": "com.kitchly_chef"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "191913794144-l4s14rig4fheic964turo0e6sa9h6caq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kitchly_chef",
+            "certificate_hash": "e4788b410bbaaf2a850171f071d13e1c9cd25063"
+          }
+        },
+        {
+          "client_id": "191913794144-vkt2ge1ehknb03d43vr9ji4ffp8g3ccu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDLlyawKHzmrzmbo8BoE9jBsH1O3Wuf2dA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "191913794144-vkt2ge1ehknb03d43vr9ji4ffp8g3ccu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

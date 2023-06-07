@@ -1,0 +1,17 @@
+library menumodule;
+export 'modules/category/category.dart';
+export 'modules/category/view_category.dart';
+export 'modules/dish/dish_action.dart';
+export 'modules/dish/dishes.dart';
+export 'modules/dish/dish_choice.dart';
+export 'modules/dish/dish_bowl.dart';
+export 'modules/dish/meals.dart';
+export 'modules/dish/view_dish.dart';
+export 'modules/extras/extra_action.dart';
+export 'modules/extras/extras.dart';
+export 'modules/extras/options_actions.dart';
+export 'modules/extras/view_extra.dart';
+export 'modules/special-packages/special-packages.dart';
+export 'modules/special-packages/package-details.dart';
+export 'modules/special-packages/packages-action.dart';
+export 'modules/menu.dart';
