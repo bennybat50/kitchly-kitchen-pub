@@ -13,10 +13,12 @@ User Management: Handles user registration, authentication, and account informat
 Order Management: Allows users to browse the menu, select items, customize orders, and place them. It also provides order tracking functionality to keep users informed about the status of their orders.
 
 Kitchen Module:
+Video link on how to setup kitchen
+https://youtu.be/j394Ddlm6_M
 The Kitchen module facilitates menu management and order preparation. It includes the following components:
 Menu Management: Enables the kitchen to add, update, and remove menu items. It maintains the list of available dishes, their descriptions, prices, and any special instructions for preparation.
 
-Order Processing: Receives orders from the User module and notifies the kitchen staff about new orders. It manages the order queue and dispatches orders to the appropriate chefs for preparation.
+Order Processing: Receives orders from the User module and notifies the kitchen  about new orders. It manages the order queue and dispatches orders to the appropriate chefs for preparation.
 
 Delivery Module:
 The Delivery module handles order delivery and driver coordination. It includes the following components:
@@ -46,6 +48,6 @@ Payment Security: Integrates with trusted payment gateways and adheres to indust
 Deployment and Scalability:
 The Kitchly App can be deployed on cloud servers, allowing easy scalability to handle increasing user demand. It can be accessed through mobile apps (iOS and Android) and a web interface for wider accessibility.
 Conclusion:
-The Kitchly App provides a comprehensive solution for users to order food, manage the kitchen operations, and coordinate deliveries. With its user-friendly interface, efficient order processing, and real-time tracking, the app enhances the overall restaurant experience for both customers and staff.
+The Kitchly App provides a comprehensive solution for users to order food, manage the kitchen operations, and coordinate deliveries. With its user-friendly interface, efficient order processing, and real-time tracking, the app enhances the overall restaurant experience for both customers and kitchens.
 
 
